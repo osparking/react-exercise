@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [colors] = useState(
+    ['#ffffcc', '#33ccff', '#66ff66', '#ffcc66', '#ff66ff']);
 
   return (
     <>
