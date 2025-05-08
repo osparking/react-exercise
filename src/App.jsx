@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     document.title = `계수기:${count}`;
     console.log("useEffect called");
-  }, []);
+  }, [count]);
 
   return (
     <>
