@@ -16,7 +16,8 @@ function App() {
         <div>{
           colors.map((color, idx) => (
             <div key={idx} className="color-block"
-              style={{ backgroundColor: color }} />
+              style={{ backgroundColor: color }}
+              onClick={() => handleClick(color)} />
           ))
         }</div>
       </div>
