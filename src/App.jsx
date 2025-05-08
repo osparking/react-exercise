@@ -1,12 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
   const incCount = () => {
     setCount(count + 1);
-    document.title = `계수기:${count}`;
   }
+
+  useEffect(() => {
+    document.title = `계수기:${count}`;
+  }, [count]);
 
   return (
     <>
