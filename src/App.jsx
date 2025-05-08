@@ -1,7 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
   const [colors] = useState(
@@ -11,6 +9,12 @@ function App() {
     <>
       <div>
         <h1>색 선택기</h1>
+        <div>{
+          colors.map((color, idx) => (
+            <div key={idx} className="color-block"
+              style={{ backgroundColor: color }} />
+          ))
+        }</div>
       </div>
     </>
   )
