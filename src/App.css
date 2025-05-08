@@ -4,34 +4,3 @@
   padding: 2rem;
   text-align: center;
 }
-
-.color-block {
-  width: 50px;
-  height: 50px;
-  display: inline-flex;
-  border: 1px dotted red;
-  cursor: pointer;
-  border: 2px solid #fff;
-}
-
-.color-palette {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.custom-color-picker {
-  margin-top: 20px;
-}
-
-.custom-color-picker input{
-  cursor: pointer;
-  border: none;
-  padding: 10px;
-  color: #fff;  
-}
-
-.custom-color-picker input:hover{
-  background-color: #555;  
-}
