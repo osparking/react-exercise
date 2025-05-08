@@ -1,13 +1,18 @@
-import { useState } from 'react';
+import { ColorPicker } from "primereact/colorpicker";
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [colors] = useState(
-    ['#ffffcc', '#33ccff', '#66ff66', '#ffcc66', '#ff66ff']);
+  const colors = ['#ffffcc', '#33ccff', '#66ff66', '#ffcc66', '#ff66ff'];
+  const [bgColor, setBgColor] = useState(colors[0]);
 
   function handleClick(color) {
     document.body.style.backgroundColor = color;
   }
+
+  useEffect(() => {
+    document.body.style.backgroundColor = bgColor;
+  }, []);
 
   return (
     <>
