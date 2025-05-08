@@ -7,6 +7,7 @@ function App() {
   const [bgColor, setBgColor] = useState(colors[0]);
 
   function handleClick(color) {
+    setBgColor(color);
     document.body.style.backgroundColor = color;
   }
 
@@ -25,6 +26,10 @@ function App() {
               onClick={() => handleClick(color)} />
           ))
         }</div>
+        <div className="custom-color-picker">
+          <input type="color" value={bgColor} 
+            onChange={(e) => handleClick(e.target.value)} />
+        </div>
       </div>
     </>
   )
