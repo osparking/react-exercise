@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-      <Parent />
+      <h1>영원한 흐름</h1>
     </div>
   )
 }
