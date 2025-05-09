@@ -15,6 +15,15 @@ function App() {
   const focusLost = (e) => {
     e.target.style.backgroundColor = "white";
   }
+  const[count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("리랜더됨");    
+  });
+
+  const incCount = () => {
+    setCount(c => c+1);
+  }
 
   return (
     <div className="mt-5">
@@ -29,6 +38,9 @@ function App() {
         onBlur={focusLost}/>
       <br/>
       <button onClick={setFocusBox2}>상자 2 입력</button>
+      <br />
+      <p>상태값: {count}</p>
+      <button onClick={incCount}>상태값 증가</button>
     </div>
   )
 }
