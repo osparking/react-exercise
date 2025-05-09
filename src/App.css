@@ -1,14 +1,17 @@
-div {
-  width: 100%;
-  font-family: 'Noto Serif KR', Arial, "Helvetica Neue", Helvetica, sans-serif;
-  text-align: center;
-  padding: 0;
+* {
   margin: 0;
-  padding-top: 40px;
-  min-height: 100vh;
-  letter-spacing: .5em;
+}
+.clock-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(51, 45, 46);
 }
 
-p {
-  font-size: 2em;
+.clock {
+  font-size: 4rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #61dafb;
 }

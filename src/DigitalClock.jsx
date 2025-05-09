@@ -19,8 +19,10 @@ const DigitalClock = () => {
   });
   
   return (
-    <div>
-      <p>{formatted}</p>
+    <div className='clock-containter'>
+      <div className='clock'>
+      	<p>{formatted}</p>
+      </div>
     </div>
   )
 }
