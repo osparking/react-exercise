@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <div>
-      <h1>환영합니다.</h1>
+      <h1>마우스 좌표:</h1>
     </div>
   )
 }
