@@ -1,9 +1,14 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 function App() {
   const refCnt = useRef(0);
   const [stateCnt, setStateCnt] = useState(0);
+
+  useEffect(()=>{
+    console.log("리렌더");    
+  })
+  
   const incStateCnt = () => {
     setStateCnt(stateCnt + 1);
   }
