@@ -10,6 +10,11 @@ const Parent = () => {
 
   return (
     <div>
+      <h1>마우스 추적기</h1>
+      <button onClick={toggleMouseTracker}>
+        {showMTracker ? "추적기 숨김" : "추적기 표시"}
+      </button>
+      {showMTracker && <MouseTracker />}
     </div>
   )
 }
