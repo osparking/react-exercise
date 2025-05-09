@@ -1,12 +1,24 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import './App.css';
 
 function App() {
-  const msg = useRef("여러분, 안녕?");
-  console.log(msg);
+  const refCnt = useRef(0);
+  const [stateCnt, setStateCnt] = useState(0);
+  const incStateCnt = () => {
+    setStateCnt(stateCnt + 1);
+  }
+  const incRefCnt = () => {
+    refCnt.current += 1;
+    console.log("refCnt: ", refCnt.current);
+  }
+
   return (
     <div>
-      <h1>리액트 학습 {msg.current}</h1>
+      <p>상태 갯수: {stateCnt}</p>
+      <button onClick={incStateCnt}>상태 증가</button>
+      <br/>
+      <p>참조 갯수: {refCnt.current}</p>
+      <button onClick={incRefCnt}>참조 증가</button>
     </div>
   )
 }
