@@ -1,10 +1,9 @@
 import './App.css';
-import Parent from './Parent';
 
 function App() {
   return (
-    <div className='clock-container'>
-      <Parent/>
+    <div>
+      <h1>리액트 학습</h1>
     </div>
   )
 }
