@@ -1,8 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
   const [mousePsn, setMousePsn] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePsn({x: e.clientX, y: e.clientY});
+    }
+    window.addEventListener("mousemove", handleMouseMove);
+  }, []);
 
   return (
     <div>
