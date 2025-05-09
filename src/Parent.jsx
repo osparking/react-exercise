@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
-import MouseTracker from './MouseTracker';
+import React, { useState } from 'react';
+import DigitalClock from './DigitalClock';
 
 const Parent = () => {
-  const [showMTracker, setShowMTracker] = useState(true);
+  const [showClock, setShowClock] = useState(true);
 
-  const toggleMouseTracker = () => {
-    setShowMTracker(flag => !flag);
+  const toggleClock = () => {
+    setShowClock(flag => !flag);
   }
 
   return (
     <div>
-      <h1>마우스 추적기</h1>
-      <button onClick={toggleMouseTracker}>
-        {showMTracker ? "추적기 숨김" : "추적기 표시"}
+      <h1>영원한 흐름</h1>
+      <button onClick={toggleClock}>
+        {showClock ? "시계 숨김" : "시계 표시"}
       </button>
-      {showMTracker && <MouseTracker />}
+      {showClock && <DigitalClock />}
     </div>
   )
 }
