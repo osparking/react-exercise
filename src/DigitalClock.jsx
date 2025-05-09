@@ -12,9 +12,15 @@ const DigitalClock = () => {
     return () => { clearInterval(intervalId); };
   }, []);
 
+  const formatted = clock.toLocaleTimeString('ko-KR', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  });
+  
   return (
     <div>
-      <p>{clock.toLocaleTimeString()}</p>
+      <p>{formatted}</p>
     </div>
   )
 }
