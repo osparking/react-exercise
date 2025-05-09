@@ -14,7 +14,7 @@ const DigitalClock = () => {
 
   return (
     <div>
-      <p>{clock.getSeconds()}</p>
+      <p>{clock.toLocaleTimeString()}</p>
     </div>
   )
 }
