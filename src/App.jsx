@@ -7,6 +7,7 @@ function App() {
   return (
     <div>
       <h1>마우스 좌표:</h1>
+      <p>x: {mousePsn.x}, y: {mousePsn.y}</p>
     </div>
   )
 }

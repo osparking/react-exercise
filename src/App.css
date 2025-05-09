@@ -8,3 +8,7 @@ div {
   min-height: 100vh;
   letter-spacing: .5em;
 }
+
+p {
+  font-size: 2em;
+}
