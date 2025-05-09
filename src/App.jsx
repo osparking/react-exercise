@@ -6,7 +6,7 @@ function App() {
   console.log(msg);
   return (
     <div>
-      <h1>리액트 학습</h1>
+      <h1>리액트 학습 {msg.current}</h1>
     </div>
   )
 }
