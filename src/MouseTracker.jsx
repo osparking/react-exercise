@@ -2,24 +2,19 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 
 const MouseTracker = () => {
-  const [mousePsn, setMousePsn] = useState({ x: 0, y: 0 });
-
+  const [clock, setClock] = useState(new Date());
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePsn({ x: e.clientX, y: e.clientY });
-    }
-    window.addEventListener("mousemove", handleMouseMove);
+    const intervalId = setInterval(() => {
+      setClock(new Date());
+    }, 1000);
 
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      console.log("removed");
-    }
+    return clearInterval(intervalId);
   }, []);
 
   return (
     <div>
-      <h1>마우스 좌 표:</h1>
-      <p>x: {mousePsn.x}, y: {mousePsn.y}</p>
+      <h1>영원한 흐름</h1>
+      <p>{clock.getSeconds()}</p>
     </div>
   )
 }
