@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import './App.css';
-import Parent from './Parent';
 
 function App() {
+  const [clock, setClock] = useState(new Date());
 
   return (
     <div>
