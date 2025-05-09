@@ -10,6 +10,10 @@ const MouseTracker = () => {
     }
     window.addEventListener("mousemove", handleMouseMove);
 
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      console.log("removed");
+    }
   }, []);
 
   return (
