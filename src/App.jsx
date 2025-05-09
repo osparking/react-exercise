@@ -1,8 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
   const [clock, setClock] = useState(new Date());
+useEffect(() => {
+  setInterval(() => {
+    setClock(new Date());
+  }, 1000)
+}, []);
 
   return (
     <div>
