@@ -9,11 +9,11 @@ const Parent = () => {
   }
 
   return (
-    <div>
-      <h1>영원한 흐름</h1>
-      <button onClick={toggleClock}>
+    <div className='clock-container'>
+      {/* <h1>영원한 흐름</h1> */}
+      {/* <button onClick={toggleClock}>
         {showClock ? "시계 숨김" : "시계 표시"}
-      </button>
+      </button> */}
       {showClock && <DigitalClock />}
     </div>
   )

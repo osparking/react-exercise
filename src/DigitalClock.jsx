@@ -13,8 +13,10 @@ const DigitalClock = () => {
   }, []);
 
   return (
-    <div>
-      <p>{clock.toLocaleTimeString()}</p>
+    <div className='clock-containter'>
+      <div className='clock'>
+        {clock.toLocaleTimeString()}
+      </div>
     </div>
   )
 }
