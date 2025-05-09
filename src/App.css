@@ -2,23 +2,10 @@
   margin: 0;
 }
 
-.clock-container {
-  width: 100vw;
+div {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: rgb(51, 45, 46);
-}
-
-.clock {
-  font-size: 4rem;
-  font-family: 'Courier New', Courier, monospace;
-  color: #61dafb;
-}
-
-div {
   width: 100vw;
-  display: flex;
-  justify-content: center;
 }
