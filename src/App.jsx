@@ -1,3 +1,4 @@
+import { createContext } from 'react';
 import './App.css';
 
 function FlavouredCompo({ flavour }) {
@@ -21,13 +22,13 @@ function CompoA({ flavour }) {
 }
 
 function App() {
-  const flavour = "바닐라";
+  const FlavourContext = createContext();
 
   return (
     <div className="mt-5"
       style={{ border: "2px solid black", padding: "20px" }}>
       <h2>App (할아버지)</h2>
-      <CompoA flavour={flavour} />
+      <CompoA />
     </div>
   )
 }
