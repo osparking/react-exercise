@@ -1,24 +1,24 @@
 import { createContext } from 'react';
 import './App.css';
 
-function FlavouredCompo({ flavour }) {
+function FlavouredCompo() {
   return (
     <div className="mt-5"
       style={{ border: "2px solid black", padding: "20px" }}>
       <h2>FlavouredCompo (나)</h2>
       아이스크림 맛: {flavour}
     </div>
-  )  
+  )
 }
 
-function CompoA({ flavour }) {
+function CompoA() {
   return (
     <div className="mt-5"
       style={{ border: "2px solid black", padding: "20px" }}>
       <h2>CompoA (아버지)</h2>
-      <FlavouredCompo flavour={flavour} />
+      <FlavouredCompo />
     </div>
-  )  
+  )
 }
 
 function App() {
