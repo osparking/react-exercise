@@ -1,7 +1,9 @@
-import { createContext } from 'react';
+import { createContext, useContext } from 'react';
 import './App.css';
 
 function FlavouredCompo() {
+  const flavour = useContext(FlavourContext);
+
   return (
     <div className="mt-5"
       style={{ border: "2px solid black", padding: "20px" }}>
@@ -21,8 +23,9 @@ function CompoA() {
   )
 }
 
+const FlavourContext = createContext();
+
 function App() {
-  const FlavourContext = createContext();
 
   return (
     <div className="mt-5"
