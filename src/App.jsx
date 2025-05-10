@@ -1,9 +1,15 @@
 import './App.css';
 
+function CompoA({flavour}) {
+
+}
+
 function App() {
+  const flavour = "바닐라";
+
   return (
     <div className="mt-5">
-      <h1>리액트 연습</h1>
+      <CompoA flavour={flavour}/>
     </div>
   )
 }
