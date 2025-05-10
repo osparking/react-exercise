@@ -23,3 +23,15 @@ function App() {
 
 export const FlavourContext = createContext("초콜릿");
 export default App;
+
+function GlobalIceCream() {
+  const flavour = useContext(FlavourContext);
+
+  return (
+    <div className="mt-5"
+      style={{ border: "2px solid crimson", padding: "20px" }}>
+      <h2>GlobalIceCream (공급자 외부)</h2>
+      아이스크림 맛: {flavour}
+    </div>
+  )
+}
