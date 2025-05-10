@@ -20,6 +20,9 @@ function App() {
           <CompoB />
         </div>
       </FlavourContext.Provider>
+      <FlavourContext.Provider value="한라봉">
+        <GlobalIceCream />
+      </FlavourContext.Provider>
     </div>
   )
 }
