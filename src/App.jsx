@@ -1,17 +1,6 @@
 import { createContext, useContext } from 'react';
 import './App.css';
-
-function FlavouredCompo() {
-  const flavour = useContext(FlavourContext);
-
-  return (
-    <div className="mt-5"
-      style={{ border: "2px solid black", padding: "20px" }}>
-      <h2>FlavouredCompo (나)</h2>
-      아이스크림 맛: {flavour}
-    </div>
-  )
-}
+import FlavouredCompo from './FlavouredCompo';
 
 function CompoA() {
   return (
@@ -23,7 +12,7 @@ function CompoA() {
   )
 }
 
-const FlavourContext = createContext("초콜릿");
+export const FlavourContext = createContext("초콜릿");
 
 function App() {
 
@@ -36,4 +25,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
