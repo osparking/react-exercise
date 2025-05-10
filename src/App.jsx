@@ -23,7 +23,7 @@ function CompoA() {
   )
 }
 
-const FlavourContext = createContext();
+const FlavourContext = createContext("초콜릿");
 
 function App() {
 
