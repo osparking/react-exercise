@@ -1,7 +1,11 @@
 import './App.css';
 
-function CompoA({flavour}) {
+function FlavouredCompo({flavour}) {
+  return <div>아이스크림 맛: {flavour}</div>
+}
 
+function CompoA({flavour}) {
+  return <FlavouredCompo flavour={flavour} />;
 }
 
 function App() {
